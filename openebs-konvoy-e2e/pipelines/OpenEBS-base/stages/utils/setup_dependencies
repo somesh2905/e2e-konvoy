@@ -5,16 +5,16 @@ derive_cluster_details_infra()
 {
  path=$(pwd) 
  ## Get kubeconfig file into infra-setup gitlab runner pod
- mkdir ~/.kube $path/openebs-konvoy $path/openebs-konvoy/.kube 
- cp -r /home/gitlab-runner/config/admin.conf ~/.kube/
- cp -r /home/gitlab-runner/config/admin.conf $path/openebs-konvoy/.kube/config
+ mkdir ~/.kube /home/gitlab-runner/openebs-konvoy /home/gitlab-runner/openebs-konvoy/.kube 
+ cp -r /home/gitlab-runner/config/admin.conf ~/.kube/config
+ cp -r /home/gitlab-runner/config/admin.conf /home/gitlab-runner/openebs-konvoy/.kube/config
 }
  
 setup_cluster_config_test()
 {
  path=$(pwd)
  mkdir ~/.kube
- cp -r $path/openebs-konvoy/.kube/config ~/.kube/config
+ cp -r /home/gitlab-runner/openebs-konvoy/.kube/config ~/.kube/config
 }
 
 if [[ $1 == "infra-setup" ]]; then

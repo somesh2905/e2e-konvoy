@@ -5,7 +5,9 @@ set -ex
 ##   ENVIRONMENT    ##
 ######################
 
-ls /config
+pwd
+
+ls /home/gitlab-runner/config
 
 present_dir=$(pwd)
 #clone e2e-infrastructre to get the latest commits and run env-exporter script from env
