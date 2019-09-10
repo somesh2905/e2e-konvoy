@@ -56,7 +56,7 @@ openebs-konvoy-deploy:
   image: ranjnshashank855/konvoy:v15
   stage: STATEFUL-APP-DEPLOY
   tags: 
-    - k8s-konvoy-test
+    - k8s-konvoy
   dependencies:
     - openebs-konvoy-deploy
   
@@ -225,7 +225,7 @@ percona-cstor:
   image: ranjnshashank855/konvoy:v15
   stage: APP-CHAOS-TEST
   tags: 
-    - k8s-konvoy-test
+    - k8s-konvoy
   when: always
   dependencies:
     - openebs-konvoy-deploy 
