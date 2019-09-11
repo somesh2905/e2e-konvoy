@@ -58,7 +58,7 @@ openebs-konvoy-deploy:
   tags: 
     - k8s-konvoy
   dependencies:
-    - openebs-konvoy-deploy
+    - konvoy-cluster
   
 
 ## Define the app deployer jobs
@@ -228,7 +228,7 @@ percona-cstor:
     - k8s-konvoy
   when: always
   dependencies:
-    - openebs-konvoy-deploy 
+    - konvoy-cluster 
   
 # repl-kill-{percona-jiva}:
 #   extends: .chaos_test_template #dependencies: percona-jiva
